@@ -10,8 +10,7 @@ function App () {
           <Input/>
           <div className="CardList">
             {
-              citiesList.map(city => <Card key={city} city={city}/>) //* пребір масива за допомогою map і формування карточки
-                //* react вимагає застосувати ключ key, можна використати змінну, а index краще не використовувати
+              citiesList.map(city => <Card key={city} city={city}/>) 
             }
           </div>
     </div>
