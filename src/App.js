@@ -1,10 +1,12 @@
+import React, { useState } from "react";
+
 import "./App.css";
 
 import { Input } from './Input/input';
 import { Card } from './Card/card';
 
 function App () {
-  const citiesList = ['New York', 'Kyiv', 'London', 'Lviv'] //* Список назв міст
+  const [citiesList, setCitiesList] = useState(['New York', 'Kyiv', 'London', 'Lviv']);
   return (
     <div className="Main">
           <Input/>
