@@ -7,7 +7,7 @@ import "../App.css";
 export const CardList = ({ citiesList }) => {
 	useEffect(() => { 
 		console.log("useEffect => citiesList", citiesList); //* useEffect в консоль
-	});
+	}, []); //* другий аргумент useEffect - це []
 	console.log("render"); //* виконання render
 	return (
 		<div className="CardList">

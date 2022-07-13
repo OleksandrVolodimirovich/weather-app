@@ -7,7 +7,6 @@ export const Input = ({ setCitiesList }) => {
 	const inputRef = useRef(null);
 
 	const handleOnClick = () => {
-		console.log("inputRef =>", inputRef);
 		setCitiesList((currentArray) => [...currentArray, inputValue]);
     setInputValue(''); 
 		inputRef.current.focus();
