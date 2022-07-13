@@ -16,10 +16,18 @@ const InputTag = () => {
 };
 
 export const Input = ({ setCitiesList }) => {
+  const handleOnClick = () => {
+    setCitiesList((currentArray) => {
+      console.log('currentArray before', currentArray)
+      currentArray.push('New York');
+      console.log('currentArray after', currentArray)
+      return currentArray;
+    })
+  }
 	return (
 		<div className="InputWrap">
 			<InputTag />
-			<button className="Button">+</button>
+			<button className="Button" onClick={handleOnClick}>+</button>
 		</div>
 	);
 };
