@@ -1,16 +1,16 @@
-import React, { useState, useRef } from "react"; // *добавив hook => useRef
+import React, { useState, useRef } from "react";
 
 import "../App.css";
 
 export const Input = ({ setCitiesList }) => {
 	const [inputValue, setInputValue] = useState("Lviv");
-	const inputRef = useRef(null); // *помістив у змінну hook => useRef з значенням null
+	const inputRef = useRef(null);
 
 	const handleOnClick = () => {
-		console.log("inputRef =>", inputRef); //* при кліку виводиться hook => useRef, який знаходиться у змінній inputRef
+		console.log("inputRef =>", inputRef);
 		setCitiesList((currentArray) => [...currentArray, inputValue]);
-    setInputValue(''); //* після натискання кнопки '+', введена назва міста в поле input очищається
-		inputRef.current.focus();//* при введенні міста фокус залишається в input
+    setInputValue(''); 
+		inputRef.current.focus();
 	};
 
 	const handleOnChange = (event) => {
