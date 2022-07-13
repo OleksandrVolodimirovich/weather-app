@@ -15,11 +15,11 @@ const InputTag = () => {
 	);
 };
 
-export const Input = () => (
-	<div className="InputWrap">
-		<InputTag />
-		<Button />
-	</div>
-);
-
-const Button = () => <button className="Button">+</button>;
+export const Input = ({ setCitiesList }) => {
+	return (
+		<div className="InputWrap">
+			<InputTag />
+			<button className="Button">+</button>
+		</div>
+	);
+};

@@ -9,7 +9,7 @@ function App () {
   const [citiesList, setCitiesList] = useState(['New York', 'Kyiv', 'London', 'Lviv']);
   return (
     <div className="Main">
-          <Input/>
+          <Input setCitiesList={setCitiesList}/>
           <div className="CardList">
             {
               citiesList.map(city => <Card key={city} city={city}/>) 
