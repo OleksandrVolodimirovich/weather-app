@@ -3,7 +3,7 @@ import React, { useState } from "react";
 import "../App.css";
 
 export const Input = ({ setCitiesList }) => {
-	const [inputValue, setInputValue] = useState("empty");
+	const [inputValue, setInputValue] = useState("Lviv");
 
 	const handleOnClick = () => {
 		setCitiesList((currentArray) => [...currentArray, inputValue]);
