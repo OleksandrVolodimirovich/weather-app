@@ -21,7 +21,7 @@ export const Input = ({ setCitiesList }) => {
       console.log('currentArray before', currentArray)
       currentArray.push('New York');
       console.log('currentArray after', currentArray)
-      return currentArray;
+      return [...currentArray, 'New York'];
     })
   }
 	return (
