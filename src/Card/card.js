@@ -7,7 +7,7 @@ export const Card = ({ city }) => {
 	const [data, setData] = useState(null);
 	useEffect(() => {
 		fetch(
-			`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${API_KEY}`
+			`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${API_KEY}&units=metric`
 		)
 			.then((res) => res.json())
 			// .then(json => setData(json)); - нижче спрощений варіант
