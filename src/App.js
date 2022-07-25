@@ -10,8 +10,7 @@ function App() {
 	return (
 		<div className="Main">
 			<Input setCitiesList={setCitiesList} />
-			{citiesList.length === 1 && <CardList citiesList={citiesList} />} 
-			{/* <CardList citiesList={citiesList} /> */}
+			<CardList citiesList={citiesList} />
 		</div>
 	);
 }
