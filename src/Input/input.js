@@ -1,4 +1,4 @@
-import React, { useState, useRef } from "react";
+import React, { useState, useRef, useMemo } from "react";
 
 import "../App.css";
 
@@ -20,7 +20,11 @@ export const Input = ({ setCitiesList }) => {
 	const onSomeClick = (event) => {
 		setSomeValue((someValue) => someValue + 1);
 	};
+
+	const oldinputValue = useMemo(() => `${inputValue}_${Math.random()}`, [inputValue]);
+
 	console.log("inputValue => ", inputValue);
+	console.log("oldinputValue => ", oldinputValue);
 	console.log("from render => ", `${inputValue}_${Math.random()}`);
 	console.log("someValue => ", someValue);
 
